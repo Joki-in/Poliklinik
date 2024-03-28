@@ -1,0 +1,46 @@
+<?php
+
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ResetPasswordController;
+use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\PendaftaranPasienBaruController;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+
+
+// Login Routes
+Route::get('/', [AuthController::class, 'LoginForm'])->name('loginShow');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+
+//Register Routes
+Route::get('/register', function () {
+    return view('auth.register');
+});
+Route::post('/register', [AuthController::class, 'register'])->name('register.create');
+//logout routes
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::get('/reset-password/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('/reset-password', [ResetPasswordController::class, 'reset'])->name('password.update');
+
+// Dashboard Routes
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+
+// Pasien Baru Routes
+Route::get('/pendaftaran-pasien-baru', [PendaftaranPasienBaruController::class, 'index'])->name('pendaftaran-pasien-baru.index');
+Route::post('/pendaftaran-pasien-baru', [PendaftaranPasienBaruController::class, 'store'])->name('pendaftaran-pasien-baru.create');
