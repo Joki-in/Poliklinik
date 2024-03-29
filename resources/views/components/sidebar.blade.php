@@ -53,13 +53,14 @@
                             data-feather="clipboard"></i><span>Pendaftaran Pasien
                             Baru</span></a>
                 </li>
-                <li class="dropdown {{ Request::path() === 'pendaftaran-pasien-baru' ? 'active' : '' }}"><a
-                        class="nav-link" href="/pendaftaran"><i data-feather="file-plus"></i><span>Pendaftaran Pasien
+                <li class="dropdown {{ Request::path() === 'pendaftaran-pasien-lama' ? 'active' : '' }}"><a
+                        class="nav-link" href="/pendaftaran-pasien-lama"><i
+                            data-feather="file-plus"></i><span>Pendaftaran Pasien
                             Lama</span></a>
                 </li>
                 <li class="menu-header">Perawatan</li>
-                <li class="dropdown {{ Request::path() === 'history-perawatan' ? 'active' : '' }}"><a class="nav-link"
-                        href="/pendaftaran"><i data-feather="archive"></i><span>History Perawatan</span></a>
+                <li class="dropdown {{ Request::path() === 'arsip' ? 'active' : '' }}"><a class="nav-link"
+                        href="/arsip"><i data-feather="archive"></i><span>History Perawatan</span></a>
                 </li>
             </ul>
         </aside>

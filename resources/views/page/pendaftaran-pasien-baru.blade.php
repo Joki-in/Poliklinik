@@ -32,6 +32,7 @@
                         <label for="tempat_lahir">Tempat Lahir</label>
                         <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir"
                             placeholder="Masukkan Tempat Lahir">
+                        <small id="tempat_lahir_help" class="form-text text-muted">Masukkan nama kota.</small>
                     </div>
                     <div class="form-group">
                         <label for="tanggal_lahir">Tanggal Lahir</label>
@@ -55,27 +56,23 @@
                         <label for="alamat">Alamat</label>
                         <textarea class="form-control" id="alamat" name="alamat" rows="3" placeholder="Masukkan Alamat"></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="rt">RT</label>
-                        <input type="text" class="form-control" id="rt" name="rt" placeholder="Masukkan RT">
-                    </div>
-                    <div class="form-group">
-                        <label for="rw">RW</label>
-                        <input type="text" class="form-control" id="rw" name="rw" placeholder="Masukkan RW">
-                    </div>
-                    <div class="form-group">
-                        <label for="pembayaran">Jenis Pembayaran</label>
-                        <select class="form-control" id="pembayaran" name="pembayaran">
-                            <option value="BPJS">BPJS</option>
-                            <option value="Umum">Umum</option>
-                        </select>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="rt">RT</label>
+                            <input type="number" class="form-control" id="rt" name="rt"
+                                placeholder="Masukkan RT" min="0">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="rw">RW</label>
+                            <input type="number" class="form-control" id="rw" name="rw"
+                                placeholder="Masukkan RW" min="0">
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @if (session('success'))
         <script>
             Swal.fire({

@@ -28,6 +28,8 @@ class PendaftaranPasienBaruController extends Controller
      */
     public function store(Request $request)
     {
+        $idUser = auth()->id();
+
         // Check if the NIK already exists in the database
         $existingPatient = Pasien::where('nik', $request->nik)->first();
 
@@ -36,8 +38,8 @@ class PendaftaranPasienBaruController extends Controller
             return redirect()->back()->with('error', 'NIK sudah terdaftar.');
         }
 
-        // Mendapatkan nomor rekam medis terakhir dari database
-        $lastPatient = Pasien::orderBy('created_at', 'desc')->first();
+        // Mendapatkan nomor rekam medis terakhir dari database berdasarkan nomor rekam medis
+        $lastPatient = Pasien::orderBy('no_rm', 'desc')->first();
 
         // Inisialisasi nomor rekam medis baru
         $nextPatientNumber = 1;
@@ -64,15 +66,14 @@ class PendaftaranPasienBaruController extends Controller
             'no_telp' => $request->no_telp,
             'status_perkawinan' => $request->status_perkawinan,
             'alamat' => $request->alamat,
-            'pembayaran' => $request->pembayaran,
             'rt' => $request->rt,
             'rw' => $request->rw,
+            'id_user' => $idUser,
         ]);
 
         // Redirect atau lakukan apa pun yang Anda butuhkan setelah menyimpan data
         return redirect()->route('pendaftaran-pasien-baru.index')->with('success', 'Data pasien berhasil disimpan.');
     }
-
     /**
      * Display the specified resource.
      */

@@ -12,18 +12,17 @@ return new class extends Migration {
     {
         Schema::create('pasien', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_user')->constrained('users');
             $table->string('no_rm');
-            $table->string('nik')->unique(); // Kolom NIK dengan konstrain unik
+            $table->string('nik')->unique();
             $table->string('nama');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
             $table->string('no_telp');
             $table->enum('status_perkawinan', ['Belum Kawin', 'Kawin', 'Janda', 'Duda']);
             $table->text('alamat');
-            $table->enum('pembayaran', ['BPJS', 'Umum']);
-            $table->string('rt'); // Kolom RT (Rukun Tetangga)
-            $table->string('rw'); // Kolom RW (Rukun Warga)
-            $table->integer('status')->default(1);
+            $table->string('rt');
+            $table->string('rw');
             $table->timestamps();
         });
     }

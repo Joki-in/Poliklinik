@@ -3,10 +3,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ArsipController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\PendaftaranLanjutanController;
 use App\Http\Controllers\PendaftaranPasienBaruController;
+use App\Http\Controllers\PendaftaranPasienLamaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +47,15 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 // Pasien Baru Routes
 Route::get('/pendaftaran-pasien-baru', [PendaftaranPasienBaruController::class, 'index'])->name('pendaftaran-pasien-baru.index');
 Route::post('/pendaftaran-pasien-baru', [PendaftaranPasienBaruController::class, 'store'])->name('pendaftaran-pasien-baru.create');
+
+// Pasien Lama Routes
+Route::get('/pendaftaran-pasien-lama', [PendaftaranPasienLamaController::class, 'index'])->name('pendaftaran-pasien-lama.index');
+Route::post('/pendaftaran-pasien-lama', [PendaftaranPasienLamaController::class, 'create'])->name('pendaftaran-pasien-lama.create');
+
+
+//Pendaftaran Lanjutan Routes
+Route::get('/pendaftaran-pasien-selanjutnya', [PendaftaranLanjutanController::class, 'nextPage'])->name('pendaftaran-lanjutan');
+Route::post('/pendaftaran-pasien-selanjutnya', [PendaftaranLanjutanController::class, 'store'])->name('pendaftaran-lanjutan.create');
+
+//Arsip Routes
+Route::get('/arsip', [ArsipController::class, 'index'])->name('arsip.index');

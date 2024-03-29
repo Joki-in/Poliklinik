@@ -15,6 +15,7 @@ class PasienSeeder extends Seeder
     {
         Pasien::create([
             'no_rm' => 'RM0001',
+            'id_user' => '1',
             'nik' => '1234567890123456',
             'nama' => 'John Doe',
             'tempat_lahir' => 'Jakarta',
@@ -24,12 +25,13 @@ class PasienSeeder extends Seeder
             'alamat' => 'Jl. Contoh No. 123',
             'rt' => '001',
             'rw' => '001',
-            'pembayaran' => 'BPJS',
-            'status' => 1,
+
+
         ]);
 
         Pasien::create([
             'no_rm' => 'RM0002',
+            'id_user' => '1',
             'nik' => '1234567890123457',
             'nama' => 'Jane Doe',
             'tempat_lahir' => 'Bandung',
@@ -39,12 +41,13 @@ class PasienSeeder extends Seeder
             'alamat' => 'Jl. Contoh No. 456',
             'rt' => '002',
             'rw' => '002',
-            'pembayaran' => 'Umum',
-            'status' => 1,
+
+
         ]);
 
         Pasien::create([
             'no_rm' => 'RM0003',
+            'id_user' => '1',
             'nik' => '1234567890123458',
             'nama' => 'Alice Smith',
             'tempat_lahir' => 'Surabaya',
@@ -54,8 +57,6 @@ class PasienSeeder extends Seeder
             'alamat' => 'Jl. Contoh No. 789',
             'rt' => '003',
             'rw' => '003',
-            'pembayaran' => 'BPJS',
-            'status' => 1,
         ]);
 
     }
