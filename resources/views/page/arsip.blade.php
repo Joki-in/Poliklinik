@@ -107,6 +107,8 @@
                                                 <p>No. Antrian: {{ $selesai->no_antrian }}</p>
                                                 <p>Tanggal Pendaftaran: {{ $selesai->tanggal_pendaftaran }}</p>
                                                 <p>Status: {{ $selesai->status }}</p>
+                                                <p>Diagnosa Dokter: </p>
+                                                <p> {{ $selesai->diagnosa }}</p>
                                                 <!-- Tambahkan detail lainnya sesuai kebutuhan -->
 
                                                 <!-- Tombol untuk mencetak modal -->
