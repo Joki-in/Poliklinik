@@ -1,12 +1,13 @@
 <?php
 
 
-use App\Http\Controllers\DaftarTungguController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ArsipController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ArsipAdminController;
+use App\Http\Controllers\DaftarTungguController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\PendaftaranLanjutanController;
@@ -47,6 +48,11 @@ Route::post('/reset-password', [ResetPasswordController::class, 'reset'])->name(
 
 // Midlleware isLogin
 Route::middleware(['isLogin'])->group(function () {
+
+    // Profile Routes
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::post('/profile', [ProfileController::class, 'updateProfile'])->name('update.profile');
+
     // Dashboard Routes
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/data-perbulan', [DashboardController::class, 'dataPerbulan']);
