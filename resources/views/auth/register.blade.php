@@ -11,8 +11,7 @@
                     <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
                         <div class="card card-primary">
                             <div class="text-center mb-4 mt-5">
-                                <img src="https://marketplace.canva.com/EAE4oLXwWVs/1/0/1600w/canva-biru-tua-dan-biru-kehijauan-gradasi-modern-dokter-logo-kesehatan-B5VpOl-RH1w.jpg"
-                                    alt="Logo" style="max-width: 200px;">
+                                <img src="foto/logo.png" alt="Logo" style="max-width: 200px;">
                             </div>
                             <div class="card-header">
                                 <h4>Register</h4>

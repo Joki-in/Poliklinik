@@ -10,8 +10,7 @@
                 <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
                     <div class="card card-primary">
                         <div class="text-center mb-4 mt-5">
-                            <img src="https://marketplace.canva.com/EAE4oLXwWVs/1/0/1600w/canva-biru-tua-dan-biru-kehijauan-gradasi-modern-dokter-logo-kesehatan-B5VpOl-RH1w.jpg"
-                                alt="Logo" style="max-width: 100px;">
+                            <img src="foto/logo.png" alt="Logo" style="max-width: 200px;">
                         </div>
                         <div class="card-header">
                             <h4 class="">Login</h4>

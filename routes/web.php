@@ -49,6 +49,7 @@ Route::post('/reset-password', [ResetPasswordController::class, 'reset'])->name(
 Route::middleware(['isLogin'])->group(function () {
     // Dashboard Routes
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::get('/data-perbulan', [DashboardController::class, 'dataPerbulan']);
 
     // Pasien Baru Routes
     Route::get('/pendaftaran-pasien-baru', [PendaftaranPasienBaruController::class, 'index'])->name('pendaftaran-pasien-baru.index');
