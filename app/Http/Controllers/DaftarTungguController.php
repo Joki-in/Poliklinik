@@ -23,6 +23,25 @@ class DaftarTungguController extends Controller
         return view('page.daftar-tunggu', compact('daftarPendaftaran'));
     }
 
+    public function updateDiagnosaStatus(Request $request, $id)
+    {
+        // Validasi data input jika diperlukan
+        $request->validate([
+            'diagnosa' => 'required|string',
+        ]);
+
+        // Cari data pendaftaran berdasarkan ID
+        $pendaftaran = Pendaftaran::findOrFail($id);
+
+        // Update diagnosa dan status menjadi "selesai"
+        $pendaftaran->diagnosa = $request->diagnosa;
+        $pendaftaran->status = 'selesai';
+        $pendaftaran->save();
+
+        // Redirect atau response sesuai kebutuhan aplikasi Anda
+        return redirect()->back()->with('success', 'Data diagnosa dan status berhasil diperbarui.');
+    }
+
     /**
      * Show the form for creating a new resource.
      */

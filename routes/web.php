@@ -68,8 +68,11 @@ Route::middleware(['isLogin'])->group(function () {
 
     //Arsip Daftar Tunggu
     Route::get('/daftar-tunggu', [DaftarTungguController::class, 'index'])->name('daftar-tunggu.index');
+    Route::put('/update-daftar-tunggu/{id}', [DaftarTungguController::class, 'updateDiagnosaStatus'])->name('update-daftar-tunggu');
 
     // Arsip Admin
     Route::get('/arsip-admin', [ArsipAdminController::class, 'index'])->name('arsip-admin.index');
-
+    Route::get('/data-awal', [ArsipAdminController::class, 'data_awal']);
+    Route::get('/data-awal-bulan-ini', [ArsipAdminController::class, 'dataAwalBulanIni']);
+    Route::get('/data-awal-custom', [ArsipAdminController::class, 'dataAwalCustom']);
 });
