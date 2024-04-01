@@ -2,8 +2,7 @@
     <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
             <div class="sidebar-brand">
-                <a href="/dashboard"> <img alt="image" src="{{ asset('admin/assets/img/logo.png') }}"
-                        class="header-logo" />
+                <a href="/dashboard"> <img alt="image" src="foto/logo.png" class="header-logo" />
                     <span class="logo-name">Poliklinik</span>
                 </a>
             </div>
@@ -40,9 +39,7 @@
     <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
             <div class="sidebar-brand">
-                <a href="/dashboard"> <img alt="image"
-                        src="{{ asset('https://marketplace.canva.com/EAE4oLXwWVs/1/0/1600w/canva-biru-tua-dan-biru-kehijauan-gradasi-modern-dokter-logo-kesehatan-B5VpOl-RH1w.jpg') }}"
-                        class="header-logo" />
+                <a href="/dashboard"> <img alt="image" src="foto/logo.png" class="header-logo" />
                     <span class="logo-name">Poliklinik</span>
                 </a>
             </div>

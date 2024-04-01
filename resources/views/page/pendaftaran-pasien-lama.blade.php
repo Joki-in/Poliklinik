@@ -14,8 +14,7 @@
                 </script>
             @endif
             <div class="card-body">
-                <img src="https://marketplace.canva.com/EAE4oLXwWVs/1/0/1600w/canva-biru-tua-dan-biru-kehijauan-gradasi-modern-dokter-logo-kesehatan-B5VpOl-RH1w.jpg"
-                    alt="Logo" class="mb-3" style="max-width: 20%;">
+                <img src="foto/logo.png" alt="Logo" class="mb-3" style="max-width: 20%;">
 
                 <form action="{{ route('pendaftaran-pasien-lama.create') }}" method="POST">
                     @csrf
