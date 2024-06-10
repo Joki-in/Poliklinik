@@ -13,9 +13,9 @@
                         <h3 class="text-center">Keperluan Anda</h3>
                         <p class="text-center">Konsultasi online</p>
                         <p class="text-center"><i class="fab fa-whatsapp"></i> <a
-                                href="https://api.whatsapp.com/send?phone=628883662780">08883662780</a></p>
+                                href="https://api.whatsapp.com/send?phone=628883662780">082349875670</a></p>
                         <p class="text-center"><i class="fab fa-instagram"></i> <a
-                                href="https://www.instagram.com/rizqinurandiputra?igsh=d3RsbjVjdHRjOXg=">@rizqinurandiputra</a>
+                                href="https://www.instagram.com/rizqinurandiputra?igsh=d3RsbjVjdHRjOXg=">@saviordental_care</a>
                         </p>
                     </div>
                 </div>
