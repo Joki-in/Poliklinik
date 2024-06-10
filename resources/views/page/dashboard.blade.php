@@ -15,7 +15,7 @@
                         <p class="text-center"><i class="fab fa-whatsapp"></i> <a
                                 href="https://api.whatsapp.com/send?phone=628883662780">082349875670</a></p>
                         <p class="text-center"><i class="fab fa-instagram"></i> <a
-                                href="https://www.instagram.com/rizqinurandiputra?igsh=d3RsbjVjdHRjOXg=">@saviordental_care</a>
+                                href="https://www.instagram.com/saviordental_care">@saviordental_care</a>
                         </p>
                     </div>
                 </div>
